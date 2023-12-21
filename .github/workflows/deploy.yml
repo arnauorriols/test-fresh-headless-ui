@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
-        
+
       - name: Install Deno
         uses: denoland/setup-deno@v1
         with:
@@ -30,4 +30,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "headlessui-test" 
-          entrypoint: "./main.ts" 
+          entrypoint: "./main.ts"
+          exclude: "node_modules"
